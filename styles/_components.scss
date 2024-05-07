@@ -1,0 +1,112 @@
+.card__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    @include breakpoint(){
+        flex-direction: column;
+    }
+
+    .img__container{
+        width: 280px;
+        height: 417px;
+        background-image: url("/images/image-product-desktop.jpg");
+        background-size: cover;
+        border-radius: 20px 0 0 20px;
+        @include breakpoint(){
+            width: 343px;
+            height: 240px;
+            background-image: url("/images/image-product-mobile.jpg");
+            border-radius: 20px 20px 0 0;
+        }
+    }
+
+    .product__container{
+        width: 280px;
+        height: 417px;
+        background-color: $bgDesc;
+        border-radius: 0 20px 20px 0;
+        @include breakpoint(){
+            width: 343px;
+            height: 372px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .product__desc{
+            height: 100%;
+            padding: .5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            text-align: left;
+            >h4{
+                font-family: $fontTxt;
+                letter-spacing: .3rem;
+                font-size: .75rem;
+                color: $colorTxt;
+                font-weight: 500;
+            }
+            >h1{
+                font-family: $fontTitle;
+                font-size: 2rem;
+                color: $colorTitle;
+            }
+            >p{
+                font-family: $fontTxt;
+                color: $colorTxt;
+                font-weight: 500;
+                font-size: .875rem;
+            }
+            .prices__container{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                #currentprice{
+                    font-family: $fontTitle;
+                    font-size: 2rem;
+                    color: $colorPrice;
+                    font-weight: 700;
+                }
+                #previousprice{
+                    text-decoration:line-through;
+                    color: $colorTxt;
+                    font-family: $fontTxt;
+                    font-size: .9rem;
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .btn__addcart{
+            width: 218px;
+            height: 45px;
+            background-color: $btnColor;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            cursor: pointer;
+            transition: all .25s ease;
+            @include breakpoint(){
+                width: 100%;
+            }
+            >img{
+                width: 17px;
+                height: 17px;
+                margin-right: 1rem;
+            }
+            >span{
+                color: $bgDesc;
+                font-family: $fontTxt;
+                font-weight: 500;
+            }
+
+            &:hover{
+                background-color: $btnHover;
+            }
+        }
+    }
+}

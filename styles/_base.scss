@@ -1,0 +1,19 @@
+//Colores
+$bgDesc:hsl(0, 0%, 100%);
+$fontTxt:"Montserrat", sans-serif;
+$colorTxt:hsl(228, 12%, 48%);
+$fontTitle:"Fraunces", serif;
+$colorTitle:hsl(212, 21%, 14%);
+$colorPrice:#3B8167;
+$btnColor:#3D8168;
+$btnHover:#1A4031;
+
+//Fuentes
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+//Mixin de media query
+@mixin breakpoint(){
+    @media screen and (max-width:560px) {
+        @content
+    }
+}
